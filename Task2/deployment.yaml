@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-deployment
+  labels:
+    app: test-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+      - name: test-app
+        image: kennethreitz/httpbin
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "100Mi"  # Минимальный запрос памяти
+          limits:
+            memory: "150Mi"  # Лимит памяти
+        livenessProbe:
+          httpGet:
+            path: /get
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
