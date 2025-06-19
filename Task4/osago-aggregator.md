@@ -1,5 +1,13 @@
 # Проектирование сервиса osago-aggregator для продажи ОСАГО
 
+**Ссылка на диаграмму** - https://drive.google.com/file/d/1Q0ywpjki5NTebka9vuQkYZZDsHp8lNqg/view?usp=sharing
+
+**Архитектура с добавленным osago-agregator**
+![Архитектура с добавленным osago-agregator](./InsureTech_C4_сontainer-diagram%20(Rogozhyn)-InsureTech%20with%20Event%20Streaming%20+%20osago-aggregator.png)
+
+**Для примера, sequence diagram флоу оформление заяки на ОСАГО с помощью osago-agregator**
+![Архитектура с добавленным osago-agregator](./SD%20-%20osago-aggregator.png)
+
 ## 1. Требуется ли хранилище данных osago-aggregator?
 
 **Да, требуется.** Необходимо хранить:
