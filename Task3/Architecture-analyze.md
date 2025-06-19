@@ -1,6 +1,12 @@
 # Анализ архитектуры InsureTech: проблемы и риски при масштабировании
 
+**Ссылка на диаграмму** - https://drive.google.com/file/d/1Q0ywpjki5NTebka9vuQkYZZDsHp8lNqg/view?usp=sharing
+
+
 ## Текущие проблемы архитектуры
+
+**Текущая архитектура**
+![Архитектура AS-IS](./InsureTech_C4_сontainer-diagram%20(Rogozhyn)-InsureTech%20(as-is).drawio.png)
 
 1. **Монолитная структура core-app**
    - Сложность горизонтального масштабирования
@@ -47,6 +53,9 @@
 
 
 # Оптимизация архитектуры InsureTech: Event-Streaming и Transactional Outbox
+
+**Оптимизированная архитектура**
+![Оптимизированная архитектура](./InsureTech_C4_сontainer-diagram%20(Rogozhyn)-InsureTech%20with%20Event%20Streaming.drawio.png)
 
 ## 1. Взаимодействия для перевода на Event-Streaming
 
@@ -103,6 +112,3 @@
 3. **Обновление клиентских данных (client-info):**
    - Изменение профиля + событие `ClientDataChanged`
    - Для синхронизации между сервисами
-
-
-Ссылка на диаграмму - https://drive.google.com/file/d/1Q0ywpjki5NTebka9vuQkYZZDsHp8lNqg/view?usp=sharing
